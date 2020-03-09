@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimpleTodo</string>
+    <string name="today_title">Today</string>
+    <string name="Week_title">Week</string>
 </resources>
