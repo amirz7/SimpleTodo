@@ -8,12 +8,14 @@ import android.support.v7.app.AppCompatActivity;
  * Created by amir on 3/10/20.
  */
 
-public class WeekActivity extends AppCompatActivity {
+public class StatusActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_week);
+        setContentView(R.layout.activity_status);
+
+
 
 
     }

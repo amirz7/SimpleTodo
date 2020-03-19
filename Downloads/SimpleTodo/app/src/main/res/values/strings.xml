@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">SimpleTodo</string>
     <string name="today_title">Today</string>
-    <string name="Week_title">Week</string>
+    <string name="week_title">Week</string>
+    <string name="month_title">Month</string>
+    <string name="hint_edittext">Enter your task</string>
 </resources>
