@@ -8,9 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.amir.simpletodo.model.Task;
+import com.example.amir.simpletodo.model.Todo;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,10 +19,10 @@ import java.util.List;
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
 
-    private List<Task> data;
+    private List<Todo> data;
     private Context context;
 
-    public HomeAdapter(List<Task> data,Context context) {
+    public HomeAdapter(List<Todo> data, Context context) {
         this.data = data;
         this.context = context;
     }
@@ -38,8 +37,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(HomeAdapter.ViewHolder holder, int position) {
 
-        Task task = data.get(position);
-        holder.textView.setText(task.getDescription());
+        Todo todo = data.get(position);
+        holder.textView.setText(todo.getDescription());
         
 
     }
@@ -50,9 +49,14 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     }
 
 
-    public void addItem(Task task) {
-        data.add(task);
-        notifyItemInserted(0);
+    public void addItem(Todo todo) {
+        data.add(todo);
+        notifyItemInserted(data.size()-1);
+    }
+
+    public void removeItem(int position) {
+        data.remove(position);
+        notifyDataSetChanged();
     }
 
     protected class ViewHolder extends RecyclerView.ViewHolder {

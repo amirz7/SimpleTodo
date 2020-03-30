@@ -3,5 +3,5 @@
     <string name="today_title">Today</string>
     <string name="week_title">Week</string>
     <string name="month_title">Month</string>
-    <string name="hint_edittext">Enter your task</string>
+    <string name="hint_edittext">Enter Your Todo</string>
 </resources>
