@@ -8,16 +8,16 @@ import java.util.Date;
  * Created by amir on 3/14/20.
  */
 
-public class Task {
+public class Todo {
 
     private String description;
     private boolean priority;
     private Date date;
     private boolean repeat;
 
-    public Task() {}
+    public Todo() {}
 
-    public Task(String description, boolean priority, Date date, boolean repeat) {
+    public Todo(String description, boolean priority, Date date, boolean repeat) {
         this.description = description;
         this.priority = priority;
         this.date = date;

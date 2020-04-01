@@ -20,7 +20,6 @@ public class DetectSwipeGestureListener extends GestureDetector.SimpleOnGestureL
     private static final int MAX_SWIPE_DISTANCE = 1000;
 
     private MainActivity activity = null;
-    private View view;
 
     public DetectSwipeGestureListener(MainActivity activity) {
         this.activity = activity;
@@ -35,13 +34,7 @@ public class DetectSwipeGestureListener extends GestureDetector.SimpleOnGestureL
         return this.activity;
     }
 
-    public void setView(View view) {
-        this.view = view;
-    }
 
-    public View getView() {
-        return this.view;
-    }
 
 
 
@@ -56,40 +49,21 @@ public class DetectSwipeGestureListener extends GestureDetector.SimpleOnGestureL
         float deltaXAbs = Math.abs(deltaX);
         float deltaYAbs = Math.abs(deltaY);
 
-        if (deltaYAbs >=MIN_SWIPE_DISTANCE && deltaYAbs <=MAX_SWIPE_DISTANCE && deltaY > 0) {
+        if (deltaYAbs >=MIN_SWIPE_DISTANCE && deltaYAbs <=MAX_SWIPE_DISTANCE && deltaY < 0) {
 
-            view.setVisibility(View.VISIBLE);
-            showSoftKeyboard();
-
-
-        } else {
-            if (view.getVisibility() == View.VISIBLE) {
-                view.setVisibility(View.INVISIBLE);
-                hideSoftKeyboard();
-            } else {
 
                 intent = new Intent(this.getActivity(), StatusActivity.class);
-                ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(this.activity, this.view, "title");
-                getActivity().startActivity(intent, activityOptions.toBundle());
 
-            }
+                getActivity().startActivity(intent);
+
+
         }
 
         return true;
     }
 
 
-    public void showSoftKeyboard() {
 
-        InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
-
-    }
-
-    public void hideSoftKeyboard() {
-        InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.toggleSoftInput(InputMethodManager.HIDE_NOT_ALWAYS,1);
-    }
 
 
 

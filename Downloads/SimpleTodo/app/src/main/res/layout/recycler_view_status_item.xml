@@ -5,12 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_status"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/status_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="parent"
-        />
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
