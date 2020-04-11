@@ -7,20 +7,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.amir.simpletodo.model.Todo;
-
 import java.util.List;
 
 /**
  * Created by amir on 3/28/20.
  */
 
-public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.View_Holder> {
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.View_Holder> {
 
     private List<String> mStatus;
     private Context mContext;
 
-    public StatusAdapter(List<String> mStatus,Context context) {
+    public CategoryAdapter(List<String> mStatus, Context context) {
         this.mStatus = mStatus;
         this.mContext = context;
     }
@@ -30,7 +28,7 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.View_Holde
     public View_Holder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         LayoutInflater layoutInflater = LayoutInflater.from(mContext);
-        View view =  layoutInflater.inflate(R.layout.recycler_view_status_item,parent,false);
+        View view =  layoutInflater.inflate(R.layout.recycler_view_category_item,parent,false);
         return new View_Holder(view);
     }
 

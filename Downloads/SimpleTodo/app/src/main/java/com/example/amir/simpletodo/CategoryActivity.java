@@ -13,7 +13,7 @@ import java.util.List;
  * Created by amir on 3/10/20.
  */
 
-public class StatusActivity extends AppCompatActivity {
+public class CategoryActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private List<String> mStatus = new ArrayList<>();
@@ -21,12 +21,12 @@ public class StatusActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_status);
+        setContentView(R.layout.activity_category);
 
 
         mRecyclerView = findViewById(R.id.recycler_status);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setAdapter(new StatusAdapter(mStatus,getApplicationContext()));
+        mRecyclerView.setAdapter(new CategoryAdapter(mStatus,getApplicationContext()));
 
 
 

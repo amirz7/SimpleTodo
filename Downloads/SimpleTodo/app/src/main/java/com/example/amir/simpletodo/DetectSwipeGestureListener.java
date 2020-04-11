@@ -1,14 +1,9 @@
 package com.example.amir.simpletodo;
 
 import android.app.Activity;
-import android.app.ActivityOptions;
-import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 
 /**
  * Created by amir on 3/9/20.
@@ -52,7 +47,7 @@ public class DetectSwipeGestureListener extends GestureDetector.SimpleOnGestureL
         if (deltaYAbs >=MIN_SWIPE_DISTANCE && deltaYAbs <=MAX_SWIPE_DISTANCE && deltaY < 0) {
 
 
-                intent = new Intent(this.getActivity(), StatusActivity.class);
+                intent = new Intent(this.getActivity(), CategoryActivity.class);
 
                 getActivity().startActivity(intent);
 

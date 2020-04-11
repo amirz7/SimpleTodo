@@ -4,4 +4,6 @@
     <string name="week_title">Week</string>
     <string name="month_title">Month</string>
     <string name="hint_edittext">Enter Your Todo</string>
+    <string name="category_activity_title">Lists</string>
+    <string name="task_title">Tasks:</string>
 </resources>
